@@ -1,0 +1,16 @@
+/* styles/Home.module.css */
+.container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    color: #333;
+  }
+  
+  .codeBlock {
+    background-color: #f4f4f4;
+    padding: 15px;
+  }

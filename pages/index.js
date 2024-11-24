@@ -6,6 +6,7 @@ export default function Home() {
       <div>
           <pre className={styles.codeBlock}>
               console.log('Hello, World!');
+              console.log('Hello, Evan qt ini Ralfy');
           </pre>
       </div>
   );

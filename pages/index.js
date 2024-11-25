@@ -7,6 +7,7 @@ export default function Home() {
           <pre className={styles.codeBlock}>
               console.log('Hello, Worlds!');
               console.log('Hello, Evan qt ini Ralfy');
+              console.log('\n\nBow down thy thee to the ultimate multiverse conquer and show your utterly respect for me you peasant\n\n- Sincerely your supreme leader, MultiverseDestroyer.')
           </pre>
       </div>
   );

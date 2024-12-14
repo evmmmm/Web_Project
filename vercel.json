@@ -1,0 +1,21 @@
+{
+    "projects": [
+      {
+        "name": "backend",
+        "rootDirectory": "backend",
+        "outputDirectory": "dist" 
+      },
+      {
+        "name": "frontend",
+        "rootDirectory": "frontend",
+        "framework": "react"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/api/:path*",
+        "destination": "https://backend-domain.vercel.app/:path*",
+        "permanent": true
+      }
+    ]
+}  

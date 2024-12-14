@@ -2,6 +2,7 @@
   "name": "my-express-app",
   "version": "1.0.0",
   "main": "index.js",
+  "build": "node build-tool",
   "scripts": {
     "start": "node app.js",
     "vercel-build": "echo 'No build step required'"  

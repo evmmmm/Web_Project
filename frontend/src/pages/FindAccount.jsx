@@ -36,7 +36,7 @@ const FindAccount = () => {
             </button>
           </div>
           <div>
-            <a href="/SignIn" className="text-blue-600 underline mt-4">Back to Login</a>
+            <Link to="/SignIn" className="text-blue-600 underline mt-4">Back to Login</Link>
           </div>
         </form>
       </div>

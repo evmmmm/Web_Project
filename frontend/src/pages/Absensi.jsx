@@ -1,11 +1,11 @@
-//import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Absensi = () => {
   const navigate = useNavigate();
   
   // State untuk riwayat absensi
-  /*const [attendanceHistory, setAttendanceHistory] = useState([
+  const [attendanceHistory, setAttendanceHistory] = useState([
     {
       id: 1,
       name: 'Lisoy',
@@ -27,7 +27,7 @@ const Absensi = () => {
       time: '10 Jun 2024, 09:43',
       color: 'bg-purple-500'
     }
-  ]);*/
+  ]);
 
   // State untuk QR Code
   const [qrCode, setQrCode] = useState('https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://absensi.example.com');

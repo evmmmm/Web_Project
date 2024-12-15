@@ -5,7 +5,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [activities, setActivities] = useState([]);
-  const [stats, setStats] = useState({
+  const [stats] = useState({ // , setStats
     absensi: 124,
     reservasi: 42
   });

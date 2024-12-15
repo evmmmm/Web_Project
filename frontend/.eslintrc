@@ -1,0 +1,14 @@
+{
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "react-app"
+    ],
+    "rules": {
+      "no-unused-vars": ["warn"],  // Mengubah dari error menjadi warning
+      "react/prop-types": "off"   // Menonaktifkan aturan prop-types jika tidak digunakan
+    }
+}  

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react'; // , useEffect }
 import { useNavigate } from 'react-router-dom';
 
 const Absensi = () => {
   const navigate = useNavigate();
   
   // State untuk riwayat absensi
-  const [attendanceHistory, setAttendanceHistory] = useState([
+  const [attendanceHistory] = useState([ // , setAttendanceHistory]
     {
       id: 1,
       name: 'Lisoy',

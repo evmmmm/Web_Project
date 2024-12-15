@@ -5,10 +5,10 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [activities, setActivities] = useState([]);
-  const [stats, setStats] = useState({
+  /*const [stats, setStats] = useState({
     absensi: 124,
     reservasi: 42
-  });
+  });*/
 
   useEffect(() => {
     const mockActivities = [

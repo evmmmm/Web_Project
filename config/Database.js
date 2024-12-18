@@ -1,12 +1,11 @@
 import { Sequelize } from "sequelize";
 
 const db = new Sequelize({
-  host: "localhost",
-  username: "root",
-  password: null,
-  database: "management_lab_rpl_b",
+  host: "sql303.infinityfree.com",
+  username: "if0_37942428",
+  password: "vLYsIWfrbzAtGx6",
+  database: "if0_37942428_WP_BE",
   dialect: "mysql",
-  port: 3308,
   logging: false,
 });
 

@@ -35,6 +35,11 @@ export const getLabItems = async (req, res) => {
         iconBg: "bg-blue-100",
         iconColor: "text-blue-600",
       },
+      "Printer 2D": {
+        icon: "🖨️",
+        iconBg: "bg-blue-100",
+        iconColor: "text-blue-600",
+      },
     };
 
     // Kelompokkan data alat berdasarkan nama laboratorium

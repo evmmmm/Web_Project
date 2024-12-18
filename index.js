@@ -1,12 +1,21 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import { Server } from "socket.io";
+import http from "http";
 import { connectDatabase } from "./config/Database.js";
 import userRoute from "./routes/userRoute.js";
 import authRoute from "./routes/authRoute.js";
 import monitoringRoute from "./routes/monitoringRoute.js";
 
 const app = express();
+const server = http.createServer(app);
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:3000", // Change to your frontend URL
+    methods: ["GET", "POST"],
+  },
+});
 
 // Middleware setup
 app.use(bodyParser.json());
@@ -18,6 +27,14 @@ app.use(
     allowedHeaders: ["Content-Type"],
   })
 );
+
+// Socket.io setup
+io.on("connection", (socket) => {
+  console.log("A user connected:", socket.id);
+  socket.on("disconnect", () => {
+    console.log("A user disconnected:", socket.id);
+  });
+});
 
 // Route setup
 app.use("/api/user", userRoute);
@@ -32,5 +49,9 @@ app.get("/", (req, res) => {
 // Connect to the database
 connectDatabase();
 
-// Export the app as the default handler
-export default app;
+// Start the server
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// Export `io` and `server`
+export { io, server };
